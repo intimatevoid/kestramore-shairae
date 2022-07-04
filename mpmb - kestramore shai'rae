@@ -19,26 +19,26 @@ RaceList["shai'rae"] = {
 	},
 	age : " reach adulthood in their late teens and live for an indefinite length of time", 
 	height : " range from 5 to 7 feet tall (4'9\" + 3d8\")", 
-	//weight : " weigh around 155 lb (2d8 \xD7 2d4 + 110 lb)",
+	weight : " weigh around 155 lb (2d8 \xD7 2d4 + 110 lb)",
 	heightMetric : " range from 1.5 to over 2.1 metres tall (140 + 10d7 cm)",
-	//weightMetric : " weigh around 70 kg (50 + 5d8 \xD7 4d4 / 10 kg)", 
+	weightMetric : " weigh around 70 kg (50 + 5d8 \xD7 4d4 / 10 kg)", 
 	improvements : "Shai'Rae: +2 Intelligence, +1 Wisdom;", 
 	scores : [0, 0, 0, 2, 1, 0], 
 	trait : "Shai'Rae (+2 Intelligence, +1 Wisdom)\n   Shai'Rae Shoma: I can alter small details of my appearance at will, e.g. colour/patterns of fur/feathers/scales/skin etc. I am immune to magical sleep and have advantage against being charmed. I make Animal Handling checks with advantage.\n   Spiritual Blood: Instead of sleeping, I meditate for up to four hours, during which time my soul may explore the wondrous Spirit Realm and commune with the spirits within.\n   Breath of Magic: I can sense the presence of magic all around me as per Detect Magic. Additionally, if I am deprived of magic (e.g. by an antimagic zone) for an extended period, I begin to weaken and eventually die after about ten days without magic. The amount of magic items I may attune to increases by one.\n   Loteslea Magic: I can attune to an appropriately levelled spell scroll as a magic item, consuming and destroying it. I may cast it from INT once per long rest.", 
 	spellcastingAbility : 4,
-	spellcastingBonus : { //optional; an object that adds something to the "Bonus Spells" section of the spell selection dialog //this object can have all the same attributes as the "spellcastingList" object as defined in the ClassList, but must also have a "name" defined //the other things that can be defined in this that are not in the "spellcastingList" object, are the "selection", "times" and "prepared" values
+	spellcastingBonus : { 
 
-		name : "Loteslea Magic", //required; this is used to identify the object, so must be an unique name
+		name : "Loteslea Magic",
 
-		class : "any", //optional but required if not including the "spells" entry; The name of the class from whose spell list the spells come from. This can be "any" if the spells are not limited by a spell list of just one class. The entry has to match the name of the class in the SpellsList
+		class : "any", 
 
-		level : [0, 3], //Optional; The lower and upper limit of spell levels that the class has access to.
+		level : [0, 3], 
 
-		selection : ["any"], //optional if "spells" is defined; this is the default selection for the array specified in "spells"
+		selection : ["any"], 
 
-		times : 1, //optional; this is the number of times the bonus spells should be added. //This can also be an array of 20 values. That way the number of times are level-dependent
+		times : 1, 
 
-		oncelr : true, //optional; if set to 'true', this makes the spell selected for this/these bonus spells to get "1×LR" in the first column
+		oncelr : true, 
 	},
 	features : { 
 		"loteslea magic" : {
