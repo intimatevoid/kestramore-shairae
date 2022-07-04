@@ -25,6 +25,21 @@ RaceList["shai'rae"] = {
 	improvements : "Shai'Rae: +2 Intelligence, +1 Wisdom;", 
 	scores : [0, 0, 0, 2, 1, 0], 
 	trait : "Shai'Rae (+2 Intelligence, +1 Wisdom)\n   Shai'Rae Shoma: I can alter small details of my appearance at will, e.g. colour/patterns of fur/feathers/scales/skin etc. I am immune to magical sleep and have advantage against being charmed. I make Animal Handling checks with advantage.\n   Spiritual Blood: Instead of sleeping, I meditate for up to four hours, during which time my soul may explore the wondrous Spirit Realm and commune with the spirits within.\n   Breath of Magic: I can sense the presence of magic all around me as per Detect Magic. Additionally, if I am deprived of magic (e.g. by an antimagic zone) for an extended period, I begin to weaken and eventually die after about ten days without magic. The amount of magic items I may attune to increases by one.\n   Loteslea Magic: I can attune to an appropriately levelled spell scroll as a magic item, consuming and destroying it. I may cast it from INT once per long rest.", 
+	spellcastingAbility : 4,
+	spellcastingBonus : { //optional; an object that adds something to the "Bonus Spells" section of the spell selection dialog //this object can have all the same attributes as the "spellcastingList" object as defined in the ClassList, but must also have a "name" defined //the other things that can be defined in this that are not in the "spellcastingList" object, are the "selection", "times" and "prepared" values
+
+		name : "Loteslea Magic", //required; this is used to identify the object, so must be an unique name
+
+		class : "any", //optional but required if not including the "spells" entry; The name of the class from whose spell list the spells come from. This can be "any" if the spells are not limited by a spell list of just one class. The entry has to match the name of the class in the SpellsList
+
+		level : [0, 3], //Optional; The lower and upper limit of spell levels that the class has access to.
+
+		selection : ["any"], //optional if "spells" is defined; this is the default selection for the array specified in "spells"
+
+		times : 1, //optional; this is the number of times the bonus spells should be added. //This can also be an array of 20 values. That way the number of times are level-dependent
+
+		oncelr : true, //optional; if set to 'true', this makes the spell selected for this/these bonus spells to get "1×LR" in the first column
+	},
 	features : { 
 		"loteslea magic" : {
 			name : "Loteslea Magic",
@@ -32,7 +47,7 @@ RaceList["shai'rae"] = {
 			usages : 1,
 			additional : ["cantrip", "cantrip", "cantrip", "cantrip", "cantrip", "1st lvl", "1st lvl", "1st lvl", "1st lvl", "1st lvl", "2nd lvl", "2nd lvl", "2nd lvl", "2nd lvl", "2nd lvl", "3rd lvl", "3rd lvl", "3rd lvl", "3rd lvl", "3rd lvl"], 
 			recovery : "long rest",
-			tooltip : "Check racial features for details",
+			tooltip : "; check racial features for details",
 		},
 	}
 
