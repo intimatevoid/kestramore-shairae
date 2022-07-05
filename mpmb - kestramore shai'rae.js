@@ -26,20 +26,31 @@ RaceList["shai'rae"] = {
 	scores : [0, 0, 0, 2, 1, 0], 
 	trait : "Shai'Rae (+2 Intelligence, +1 Wisdom)\n   Shai'Rae Shoma: I can alter small details of my appearance at will, e.g. colour/patterns of fur/feathers/scales/skin etc. I am immune to magical sleep and have advantage against being charmed. I make Animal Handling checks with advantage.\n   Spiritual Blood: Instead of sleeping, I meditate for up to four hours, during which time my soul may explore the wondrous Spirit Realm and commune with the spirits within.\n   Breath of Magic: I can sense the presence of magic all around me as per Detect Magic. Additionally, if I am deprived of magic (e.g. by an antimagic zone) for an extended period, I begin to weaken and eventually die after about ten days without magic. The amount of magic items I may attune to increases by one.\n   Loteslea Magic: I can attune to an appropriately levelled spell scroll as a magic item, consuming and destroying it. I may cast it from INT once per long rest.", 
 	spellcastingAbility : 4,
-	spellcastingBonus : { 
-
-		name : "Loteslea Magic",
-
-		class : "any", 
-
-		level : [0, 3], 
-
-		selection : ["any"], 
-
-		times : 1, 
-
-		oncelr : true, 
-	},
+	spellcastingBonus : [{
+		name : "Loteslea Magic (level 1-5)",
+		class : "any",
+		firstCol : "oncelr",
+		level : [0, 0],
+		times : [1,1,1,1,1,0] // you don't need anything after the last 0, as the sheet will look at the highest level in the array for levels beyond it
+	  }, {
+		name : "Loteslea Magic (level 6-10)",
+		class : "any",
+		firstCol : "oncelr",
+		level : [0, 1],
+		times : [0,0,0,0,0,1,1,1,1,1,0]
+	  }, {
+		name : "Loteslea Magic (level 11-15)",
+		class : "any",
+		firstCol : "oncelr",
+		level : [0, 2],
+		times : [0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,0]
+	  }, {
+		name : "Loteslea Magic (level 16-20)",
+		class : "any",
+		firstCol : "oncelr",
+		level : [0, 3],
+		times : [0,0,0,0,0,0,0,0,0,0,0,0,0,0,01,1,1,1,1]
+	  }],
 	features : { 
 		"loteslea magic" : {
 			name : "Loteslea Magic",
